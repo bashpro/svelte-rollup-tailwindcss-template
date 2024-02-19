@@ -1,107 +1,49 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or  if you want a full-fledged app framework  use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# Svelte + Rollup + Tailwind CSS Template
 
----
+This template provides a starting point for building a web application using Svelte, Rollup, and Tailwind CSS. It's configured and ready to go—all you need to do is clone the repository and install the dependencies.
 
-# svelte app
+## Getting Started
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+To get started with this template, follow these steps:
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+1. Clone this repository:
+git clone github.com/bashpro/svelte-rollup-tailwindcss-template
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+2. Navigate into the project directory:
+cd ./project-name
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
+3. Install the dependencies:
 npm install
-```
 
-...then start [Rollup](https://rollupjs.org):
+## Running the Project
+
+To run the project in development mode, execute the following command:
 
 ```bash
 npm run dev
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+This will start a local development server and open up a browser window to your application.
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+## Building for Production
 
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
+To build the project for production, run:
 
 ```bash
 npm run build
 ```
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 
+This will generate a `public` folder with your compiled code, ready to be deployed.
 
-## Single-page app mode
+## Disclaimer
 
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
+Please note that while this template integrates Tailwind CSS for styling, Tailwind's dark mode functionality is not supported out of the box with Rollup due to certain limitations. If dark mode is a critical feature for your project, you may need to explore alternative setups or adjustments to the Tailwind configuration.
 
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
+## Contributing
 
-```js
-"start": "sirv public --single"
-```
+Contributions to improve the template are welcome. Please feel free to submit a pull request or open an issue if you have suggestions or find any bugs.
 
-## Using TypeScript
+## License
 
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+This template is open-sourced software licensed under the MIT license.
